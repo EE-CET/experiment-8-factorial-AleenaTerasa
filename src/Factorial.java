@@ -1,11 +1,22 @@
+import java.util.Scanner;
+
 public class Factorial {
-
-    // TODO: Create a method 'public static long factorial(int n)'
-    // It should return the factorial of n.
-
-    
-        // TODO: Read input n
-        // TODO: Call factorial(n)
-        // TODO: Print the result
-    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        // FIX: Use sc.nextInt() to read the user's input into a variable
+        int num = sc.nextInt(); 
+        
+        long factorial = 1;
+        
+        // FIX: Loop until 'i' reaches the input number 'num'
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        
+        System.out.println("Factorial of " + num + " is: " + factorial);
+        
+        sc.close(); // Recommended: Close the scanner to free resources
+    }
 }
